@@ -1,0 +1,191 @@
+/* ==========================================================
+   Contact Page Styles (contact.css)
+   ========================================================== */
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #35b0e4;
+    background-color: #141739;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #141739;
+    color: #35b0e4;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #35b0e4;
+    text-align: center;
+}
+
+nav {
+    background-color: #35b0e4;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fffffe;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a {
+    display: inline-block;
+    padding: 0.2rem 1.0rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3182ce;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact {
+    max-width: 480px;
+    margin: 2.5rem auto;
+    padding: 35px 30px;
+    text-align: left;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.contact h1 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    background-color: #0d1127;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+#contactForm textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+#contactForm button {
+    width: 100%;
+    background-color: #38bdf8;
+    color: #0d1127;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#contactForm button:hover {
+    background-color: #7dd3fc;
+}
+
+/* Responsive & Theme */
+.menu-toggle {
+    display: none;
+}
+
+.theme-toggle {
+    padding: 0.55rem 0.8rem;
+    border: 0;
+    border-radius: 5px;
+    background: #38bdf8;
+    color: #0d1127;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.page-ready {
+    animation: page-reveal 0.35s ease-out;
+}
+
+@keyframes page-reveal {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: inline-block;
+        padding: 0.4rem 0.7rem;
+        border: 0;
+        background: #0d1127;
+        color: #fff;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        margin-top: 0.5rem;
+    }
+    nav a {
+        margin: 0;
+    }
+}
+
+body.light-theme {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+body.light-theme header {
+    background: #e2e8f0;
+    color: #0369a1;
+}
+
+body.light-theme .contact {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+}
+
+body.light-theme #contactForm label {
+    color: #334155;
+}
+
+body.light-theme #contactForm input,
+body.light-theme #contactForm textarea {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}

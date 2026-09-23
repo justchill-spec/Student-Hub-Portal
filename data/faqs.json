@@ -1,0 +1,18 @@
+[
+  {"id":"FAQ001","category":"Exams","question":"How can I view the examination timetable?","answer":"Open the Timetable page from the portal navigation and select the examination view.","tags":["exams","timetable"]},
+  {"id":"FAQ002","category":"Attendance","question":"What is the minimum attendance requirement?","answer":"Students should maintain the minimum attendance percentage specified by their department and university rules.","tags":["attendance","rules"]},
+  {"id":"FAQ003","category":"Library","question":"How many books can a student borrow?","answer":"The borrowing limit is shown in your library account and may vary by student category.","tags":["library","books"]},
+  {"id":"FAQ004","category":"Placements","question":"Where are placement announcements posted?","answer":"Placement announcements are published by the Training Cell on the portal notice area.","tags":["placements","notices"]},
+  {"id":"FAQ005","category":"Courses","question":"How do I find my course details?","answer":"Use the Course page to view enrolled subjects, credits, and faculty information.","tags":["courses","subjects"]},
+  {"id":"FAQ006","category":"Results","question":"When are semester results released?","answer":"Results are released after evaluation and approval by the university examination office.","tags":["results","semester"]},
+  {"id":"FAQ007","category":"Registration","question":"How can I update my profile information?","answer":"Open Profile, edit the available fields, and submit the updated information.","tags":["profile","account"]},
+  {"id":"FAQ008","category":"Attendance","question":"Can I submit an attendance correction request?","answer":"Contact your faculty or department office with supporting details for attendance corrections.","tags":["attendance","correction"]},
+  {"id":"FAQ009","category":"Exams","question":"Where can I download exam instructions?","answer":"Exam instructions are shared by the examination office before each examination period.","tags":["exams","instructions"]},
+  {"id":"FAQ010","category":"Library","question":"How do I access digital library resources?","answer":"Use the library portal link and sign in with your student credentials.","tags":["library","digital"]},
+  {"id":"FAQ011","category":"Placements","question":"How do I register for a campus placement drive?","answer":"Check the placement notice and complete the registration form before its deadline.","tags":["placements","registration"]},
+  {"id":"FAQ012","category":"Facilities","question":"How can I report a campus facility issue?","answer":"Use the Contact page or inform the responsible campus facility office.","tags":["facilities","support"]},
+  {"id":"FAQ013","category":"Events","question":"Where can I find upcoming campus events?","answer":"Open Events and Directory to search events, filter categories, and view event details.","tags":["events","calendar"]},
+  {"id":"FAQ014","category":"Login","question":"What should I do if I forget my password?","answer":"Contact the portal administrator or student help desk to request account assistance.","tags":["login","password"]},
+  {"id":"FAQ015","category":"Scholarships","question":"Where can I find scholarship information?","answer":"Scholarship notices and eligibility details are shared by the student welfare office.","tags":["scholarship","finance"]},
+  {"id":"FAQ016","category":"Transport","question":"Where can I view campus bus information?","answer":"Contact the transport office for routes, timings, and pass renewal information.","tags":["transport","bus"]}
+]

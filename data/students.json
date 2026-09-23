@@ -1,0 +1,18 @@
+[
+  {"id":"STU001","name":"Aarav Sharma","department":"Computer Engineering","semester":6,"email":"aarav.sharma@studenthub.edu","phone":"9000000001","cgpa":9.21,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU002","name":"Diya Patel","department":"Information Technology","semester":4,"email":"diya.patel@studenthub.edu","phone":"9000000002","cgpa":8.76,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU003","name":"Rohan Mehta","department":"Mechanical Engineering","semester":8,"email":"rohan.mehta@studenthub.edu","phone":"9000000003","cgpa":8.42,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU004","name":"Ananya Iyer","department":"Civil Engineering","semester":6,"email":"ananya.iyer@studenthub.edu","phone":"9000000004","cgpa":9.04,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU005","name":"Kabir Singh","department":"Computer Engineering","semester":4,"email":"kabir.singh@studenthub.edu","phone":"9000000005","cgpa":7.98,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU006","name":"Meera Nair","department":"Information Technology","semester":8,"email":"meera.nair@studenthub.edu","phone":"9000000006","cgpa":9.35,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU007","name":"Vihaan Rao","department":"Civil Engineering","semester":2,"email":"vihaan.rao@studenthub.edu","phone":"9000000007","cgpa":8.11,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU008","name":"Ishita Desai","department":"Mechanical Engineering","semester":6,"email":"ishita.desai@studenthub.edu","phone":"9000000008","cgpa":8.89,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU009","name":"Arjun Verma","department":"Computer Engineering","semester":8,"email":"arjun.verma@studenthub.edu","phone":"9000000009","cgpa":9.48,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU010","name":"Sara Khan","department":"Information Technology","semester":2,"email":"sara.khan@studenthub.edu","phone":"9000000010","cgpa":8.63,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU011","name":"Aditya Joshi","department":"Civil Engineering","semester":4,"email":"aditya.joshi@studenthub.edu","phone":"9000000011","cgpa":7.84,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU012","name":"Nisha Kulkarni","department":"Mechanical Engineering","semester":8,"email":"nisha.kulkarni@studenthub.edu","phone":"9000000012","cgpa":9.12,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU013","name":"Yash Gupta","department":"Computer Engineering","semester":2,"email":"yash.gupta@studenthub.edu","phone":"9000000013","cgpa":8.28,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU014","name":"Tara Menon","department":"Information Technology","semester":6,"email":"tara.menon@studenthub.edu","phone":"9000000014","cgpa":9.01,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU015","name":"Manav Shah","department":"Civil Engineering","semester":8,"email":"manav.shah@studenthub.edu","phone":"9000000015","cgpa":8.57,"status":"Active","avatar":"../images/logo.png"},
+  {"id":"STU016","name":"Priya Das","department":"Mechanical Engineering","semester":4,"email":"priya.das@studenthub.edu","phone":"9000000016","cgpa":8.94,"status":"Active","avatar":"../images/logo.png"}
+]

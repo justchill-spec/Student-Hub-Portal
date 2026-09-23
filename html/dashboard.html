@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Portal - Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+<!-- =====================================
+     DASHBOARD PAGE START
+===================================== -->
+<header>
+    <img 
+    src = "../images/logo.png"
+    alt = "Studenthub logo"
+    style="width: 100px;height: 100px;"
+    href = "html/index.html">
+
+
+    <h1>Student Hub Portal</h1>
+
+    </header>
+
+    <nav>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="portal-links">&#9776;</button>
+
+        <div id="portal-links" class="nav-links">
+        <a href="assignment.html">ASSIGNMENT</a>
+        <a href="attendance.html">ATTENDANCE</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="course.html">COURSE</a>
+        <a href="events.html">EVENTS &amp; DIRECTORY</a>
+        <a href="result.html">RESULT</a>
+        <a href="dashboard.html">DASHBOARD</a>
+        <a href="timetable.html">TIMETABLE</a>
+        <a href="profile.html">PROFILE</a>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Switch to light theme">LIGHT THEME</button>
+        
+    </nav>
+
+
+<div class="dashboard">
+
+    <h1>Welcome, Student</h1>
+
+   <table>
+    <tr>
+        <th>Attendance</th>
+        <th>CGPA</th>
+        <th>Courses</th>
+        <th>Assignments</th>
+    </tr>
+    <tr>
+        <td>90%</td>
+        <td>8.50</td>
+        <td>6</td>
+        <td>3 Pending</td>
+    </tr>
+</table>
+    </div>
+
+    <div class="notice">
+
+        <h2>Latest Notices</h2>
+
+        <ul>
+
+            <li>Java Project Submission - 20 July</li>
+            <li>DSA Quiz - Friday</li>
+            <li>Holiday on Monday</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+    <main class="interactive-dashboard">
+        <section class="notification-banner" style="border-left-color: #38bdf8; background: rgba(56, 189, 248, 0.1);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                <div>
+                    <span class="practical-tag" style="margin-bottom: 0.3rem;">Practical 6</span>
+                    <strong style="color: #38bdf8; display: block;">External JSON Data Hub (Fetch API, Search, Filter &amp; Pagination)</strong>
+                    <span style="font-size: 0.9rem; color: #cbd5e1;">Browse 16+ live campus events, student profiles, and FAQs rendered dynamically.</span>
+                </div>
+                <a href="events.html" style="background: #38bdf8; color: #0d1127; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; text-decoration: none;">EXPLORE DATA &rarr;</a>
+            </div>
+        </section>
+
+        <section class="notification-banner" role="status">
+            <strong>Action needed:</strong> Java Project Submission is due on 20 July.
+            <button class="dismiss-notice" type="button" aria-label="Dismiss notification">&times;</button>
+        </section>
+
+        <section class="dashboard-slider" aria-label="Student updates">
+            <div class="slider-heading">
+                <h2 id="slide-title">Focus this week</h2>
+                <div class="slider-controls">
+                    <button class="slide-prev" type="button" aria-label="Previous update">&#8592;</button>
+                    <span class="slide-status" aria-live="polite">1 / 3</span>
+                    <button class="slide-next" type="button" aria-label="Next update">&#8594;</button>
+                </div>
+            </div>
+            <p id="slide-copy">Review your Java project checklist before the submission deadline.</p>
+        </section>
+
+        <section class="faq-section" aria-labelledby="faq-title">
+            <h2 id="faq-title">Student help desk</h2>
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">How is attendance calculated?<span aria-hidden="true">+</span></button>
+                <div class="faq-answer" hidden>Attendance is calculated from the classes marked present in the current semester.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">Where can I see my grades?<span aria-hidden="true">+</span></button>
+                <div class="faq-answer" hidden>Open the Result page from the navigation menu to review your latest grades.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">How do I contact the office?<span aria-hidden="true">+</span></button>
+                <div class="faq-answer" hidden>Use the Contact page to send a message to the student services team.</div>
+            </div>
+        </section>
+
+        <button class="modal-open" type="button">VIEW CAMPUS UPDATE</button>
+    </main>
+
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Close campus update">&times;</button>
+            <h2 id="modal-title">Campus update</h2>
+            <p>The library will remain open until 9:00 PM during assessment week. Bring your student ID for entry.</p>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+
+
+</body>
+</html>

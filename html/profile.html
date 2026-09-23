@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/profile.css"> 
+
+    <title>Student Portal - Profile</title>
+
+    
+</head>
+
+<body>
+
+
+<header>
+    <img 
+    src = "../images/logo.png"
+    alt = "Studenthub logo"
+    style="width: 100px;height: 100px;"
+    href = "html/index.html">
+
+
+    <h1>Student Hub Portal</h1>
+
+    </header>
+
+    <nav>
+
+        <a href="assignment.html">ASSIGNMENT</a>
+        <a href="attendance.html">ATTENDANCE</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="course.html">COURSE</a>
+        <a href="events.html">EVENTS &amp; DIRECTORY</a>
+        <a href="result.html">RESULT</a>
+        <a href="dashboard.html">DASHBOARD</a>
+        <a href="timetable.html">TIMETABLE</a>
+        <a href="profile.html">PROFILE</a>
+        
+    </nav>
+
+
+<main class="profile-container">
+    <div class="tabbed-profile">
+        <!-- Left Profile Summary -->
+        <div class="profile-summary">
+            <div class="avatar-box">
+                <img src="../images/image.png" alt="Student Photo">
+            </div>
+            <h3>Mukund Borole</h3>
+            <span class="id-tag">ID: 25DCE012</span>
+            <label for="photo-upload" class="upload-btn">Change Photo</label>
+            <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+        </div>
+
+        <!-- Right Content Section -->
+        <div class="profile-details-pane">
+            <div class="pane-header">
+                <button class="tab-btn active">Academic Profile</button>
+                <button class="tab-btn">Contact Details</button>
+            </div>
+
+            <div class="pane-content">
+                <ul class="info-list">
+                    <li>
+                        <span class="label">Full Name:</span>
+                        <span class="val">Mukund Borole</span>
+                    </li>
+                    <li>
+                        <span class="label">Department:</span>
+                        <span class="val">Computer Engineering</span>
+                    </li>
+                    <li>
+                        <span class="label">Current Semester:</span>
+                        <span class="val">Semester 3</span>
+                    </li>
+                    <li>
+                        <span class="label">Email:</span>
+                        <span class="val">mukund@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="label">Phone:</span>
+                        <span class="val">+91 9898989898</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script src="../js/profile.js"></script>
+</body>
+</html>

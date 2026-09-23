@@ -1,0 +1,215 @@
+/* ==========================================================
+   Register Page Styles (register.css)
+   ========================================================== */
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #35b0e4;
+    background-color: #141739;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #141739;
+    color: #35b0e4;
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #35b0e4;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    padding: 0.2rem 1.0rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3182ce;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+form {
+    max-width: 520px;
+    margin: 1.5rem auto;
+    padding: 40px 35px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #e2e8f0;
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 11px 13px;
+    background-color: #0d1127;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 6px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #38bdf8;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.error-message {
+    display: block;
+    min-height: 18px;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #fca5a5;
+}
+
+.input-error {
+    border-color: #f87171 !important;
+    box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.5) !important;
+}
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.submit-btn,
+.reset-btn {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn {
+    background-color: #38bdf8;
+    color: #0d1127;
+}
+
+.submit-btn:hover {
+    background-color: #7dd3fc;
+}
+
+.reset-btn {
+    background-color: transparent;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+}
+
+.reset-btn:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+.page-ready {
+    animation: page-reveal 0.35s ease-out;
+}
+
+@keyframes page-reveal {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+body.light-theme {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+body.light-theme header {
+    background: #e2e8f0;
+    color: #0369a1;
+}
+
+body.light-theme form {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+}
+
+body.light-theme .form-group label {
+    color: #334155;
+}
+
+body.light-theme input[type="text"],
+body.light-theme input[type="email"],
+body.light-theme input[type="tel"],
+body.light-theme input[type="password"],
+body.light-theme select {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+body.light-theme .radio-group label,
+body.light-theme .checkbox-group label {
+    color: #334155;
+}
+
+body.light-theme .reset-btn {
+    border-color: #cbd5e1;
+    color: #64748b;
+}
+
+body.light-theme .reset-btn:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
