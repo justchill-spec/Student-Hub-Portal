@@ -1,0 +1,38 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #35b0e4;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #010101;
+   
+}
+header {
+    
+    color: #35b0e4;
+    padding: 10px;
+    text-align: center;
+}
+nav {
+    background-color: #35b0e4;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: #fffffe;
+    text-decoration: none;
+    margin: 0 10px;}
+table th, table td {
+    border: 1px solid #35b0e4;
+    padding: 8px;
+    text-align: center;
+   
+}
+   h1 {
+    color: #35b0e4;
+    text-align: center;}
