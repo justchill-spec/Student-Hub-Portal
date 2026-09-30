@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portal - Events & Directory (Practical 6)</title>
+    <title>Student Portal - Events</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-<!-- =====================================
-     PRACTICAL 6: FETCH API DATA VIEW
-===================================== -->
 <header>
     <img 
         src="../images/logo.png" 
@@ -34,109 +31,35 @@
         <a href="dashboard.html">DASHBOARD</a>
         <a href="timetable.html">TIMETABLE</a>
         <a href="profile.html">PROFILE</a>
-        <a href="events.html" class="nav-active">EVENTS &amp; DIRECTORY</a>
+        <a href="events.html" class="nav-active">EVENTS</a>
     </div>
 
     <button class="theme-toggle" type="button" aria-label="Switch to light theme">LIGHT THEME</button>
 </nav>
 
 <main class="data-portal-page">
-
-    <!-- Practical Header & Dataset Tabs -->
     <section class="portal-header-section">
-        <h2 id="sectionTitle">Campus Events</h2>
-        <p id="sectionSubtitle">Explore upcoming hackathons, workshops, fests, and seminars.</p>
+        <h2>Upcoming Events</h2>
+        <p>Stay updated with campus activities, workshops, seminars, and student opportunities.</p>
+    </section>
 
-        <div class="dataset-tabs-row" role="tablist" aria-label="Select Dataset">
-            <button class="dataset-tab-btn active" data-dataset="events" type="button" role="tab">
-                &#128197; Campus Events
-            </button>
-            <button class="dataset-tab-btn" data-dataset="students" type="button" role="tab">
-                &#127891; Student Directory
-            </button>
-            <button class="dataset-tab-btn" data-dataset="faqs" type="button" role="tab">
-                &#10067; Knowledge FAQs
-            </button>
+    <section class="toolbar-section minimal-search-wrap">
+        <div class="minimal-toolbar">
+            <input id="eventSearch" type="text" placeholder="Search events..." aria-label="Search events">
+            <select id="eventSort" aria-label="Sort events">
+                <option value="date">Sort: Date</option>
+                <option value="title">Sort: Title</option>
+            </select>
         </div>
     </section>
 
-    <!-- Interactive Control Toolbar: Search, Filters, Sorting & Page Size -->
-    <section class="toolbar-section">
-        <div class="search-box-wrapper">
-            <span class="search-icon">&#128269;</span>
-            <input 
-                type="text" 
-                id="searchInput" 
-                placeholder="Search by title, description, department, or keyword..." 
-                aria-label="Search records"
-            >
-            <button type="button" id="clearSearchBtn" class="clear-search-btn" title="Clear search">&times;</button>
-        </div>
-
-        <div class="filters-row">
-            <div class="filter-item">
-                <label for="categoryFilter">Filter By:</label>
-                <select id="categoryFilter" aria-label="Category or Department Filter">
-                    <option value="all">All Categories</option>
-                </select>
-            </div>
-
-            <div class="filter-item">
-                <label for="sortSelect">Sort By:</label>
-                <select id="sortSelect" aria-label="Sorting Options">
-                    <option value="default">Default Order</option>
-                </select>
-            </div>
-
-            <div class="filter-item">
-                <label for="pageSizeSelect">Show:</label>
-                <select id="pageSizeSelect" aria-label="Items per page">
-                    <option value="4">4 per page</option>
-                    <option value="6" selected>6 per page</option>
-                    <option value="8">8 per page</option>
-                    <option value="12">12 per page</option>
-                </select>
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Status / Result Count Indicator -->
-    <div class="status-bar-row">
-        <span id="resultsCount" class="results-count-text">Loading records...</span>
-    </div>
-
-    <!-- Data Presentation Section -->
     <section class="data-view-section">
-
-        <!-- Loading State Indicator (Question 3) -->
-        <div id="loadingIndicator" class="loading-container" style="display: none;">
-            <div class="spinner"></div>
-            <p>Fetching JSON records asynchronously...</p>
-        </div>
-
-        <!-- Error Handling State Banner (Question 3) -->
-        <div id="errorBanner" class="error-banner" style="display: none;">
-            <div class="error-content">
-                <span class="error-icon">&#9888;</span>
-                <div>
-                    <strong>Data Fetch Error:</strong>
-                    <p id="errorMessage">Failed to load external JSON dataset.</p>
-                </div>
-            </div>
-            <button id="retryBtn" class="retry-btn" type="button">Retry Fetch</button>
-        </div>
-
-        <!-- Dynamic Content Output (Events, Students, or FAQs) -->
         <div id="dynamicDataContainer" class="dynamic-container" aria-live="polite"></div>
-
-        <!-- Pagination Controls (Question 2) -->
-        <div id="paginationControls" class="pagination-wrapper" aria-label="Pagination Navigation"></div>
-
     </section>
-
 </main>
 
 <script src="../js/script.js"></script>
+<script src="../js/fetch-data.js"></script>
 <script src="../js/data-renderer.js"></script>
 
 </body>

@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupNav();
   setupThemeToggle();
   setupContactForm();
+  setupFaqSection();
 });
 
 function setupContactForm() {
@@ -89,4 +90,69 @@ function setupThemeToggle() {
     localStorage.setItem("student-hub-theme", isLight() ? "light" : "dark");
     updateLabel();
   });
+}
+
+async function setupFaqSection() {
+  const faqContainer = document.getElementById("contactFaqs");
+  if (!faqContainer) return;
+
+  const faqs = await loadFaqs();
+  const visibleFaqs = faqs.slice(0, 5);
+
+  faqContainer.innerHTML = visibleFaqs.map((faq, index) => `
+    <div class="faq-item">
+      <button class="faq-question" type="button" aria-expanded="${index === 0}">
+        <span class="faq-question-text">${faq.question}</span>
+        <span class="faq-toggle-icon">${index === 0 ? "−" : "+"}</span>
+      </button>
+      <div class="faq-answer" ${index === 0 ? "" : "hidden"}>${faq.answer}</div>
+    </div>
+  `).join("");
+
+  faqContainer.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+      const answer = question.nextElementSibling;
+      const icon = question.querySelector(".faq-toggle-icon");
+      const expanded = question.getAttribute("aria-expanded") === "true";
+      question.setAttribute("aria-expanded", String(!expanded));
+      answer.hidden = expanded;
+      icon.textContent = expanded ? "+" : "−";
+    });
+  });
+}
+
+async function loadFaqs() {
+  const fallbackFaqs = [
+    {
+      question: "How can I view my timetable?",
+      answer: "Open the Timetable page from the portal menu and select the relevant week or exam schedule."
+    },
+    {
+      question: "Where do I check attendance?",
+      answer: "Visit the Attendance page to review your monthly percentage and the latest class entries."
+    },
+    {
+      question: "How do I contact the student services team?",
+      answer: "Use the form on this page to send a message and the support team will get back to you."
+    },
+    {
+      question: "When are results published?",
+      answer: "Results are published after faculty evaluation and university approval for each term."
+    },
+    {
+      question: "How do I update my profile details?",
+      answer: "Go to the Profile page, edit the information, and save the changes before leaving the screen."
+    }
+  ];
+
+  try {
+    const response = await fetch("../data/faqs.json");
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    if (Array.isArray(data) && data.length) return data;
+  } catch (error) {
+    console.warn("FAQ data could not be loaded; using fallback data instead.", error);
+  }
+
+  return fallbackFaqs;
 }

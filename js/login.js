@@ -1,7 +1,4 @@
-/**
- * Login Page Script (login.js)
- * Validates all login parameters and verifies credentials before showing dashboard.html
- */
+
 
 function redirecttohome() {
   window.location.href = "dashboard.html";
@@ -15,7 +12,7 @@ function getRegisteredUsers() {
       email: "mukund@gmail.com",
       mobile: "9898989898",
       password: "Password@123",
-      course: "BCA",
+      course: "BE",
       year: "2",
       gender: "Male"
     }

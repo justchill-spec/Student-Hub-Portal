@@ -35,30 +35,34 @@
         <a href="dashboard.html">DASHBOARD</a>
         <a href="timetable.html">TIMETABLE</a>
         <a href="profile.html">PROFILE</a>
+        <a href="events.html">EVENTS</a>
         
     </nav>
     <br>
   
 
-<div class="contact">
+<div class="contact-layout">
+    <section class="contact" aria-labelledby="contact-title">
+        <h1 id="contact-title">Contact Us</h1>
 
-    <h1>Contact Us</h1>
+        <form id="contactForm">
+            <label>Name:</label>
+            <input type="text" id="contactName" placeholder="Enter Your Name">
 
-    <form id="contactForm">
+            <label>Email:</label>
+            <input type="email" id="contactEmail" placeholder="Enter Your Email">
 
-        <label>Name:</label>
-        <input type="text" id="contactName" placeholder="Enter Your Name">
+            <label>Message:</label>
+            <textarea id="message" rows="5" placeholder="Enter Your Message"></textarea>
 
-        <label>Email:</label>
-        <input type="email" id="contactEmail" placeholder="Enter Your Email">
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-        <label>Message:</label>
-        <textarea id="message" rows="5" placeholder="Enter Your Message"></textarea>
-
-        <button type="submit">Send</button>
-
-    </form>
-
+    <aside class="faq-panel" aria-labelledby="faq-title">
+        <h2 id="faq-title">Student Help Center</h2>
+        <div id="contactFaqs" class="faq-accordion" aria-live="polite"></div>
+    </aside>
 </div>
 
 <!-- ===== CONTACT PAGE END ===== -->

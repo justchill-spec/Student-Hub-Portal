@@ -1,7 +1,4 @@
-/**
- * Register Page Script (register.js)
- * Validates registration parameters, creates student profile, and redirects to dashboard.html
- */
+
 
 function redirecttohome() {
   window.location.href = "dashboard.html";

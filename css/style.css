@@ -517,6 +517,43 @@ body.light-theme .dashboard-slider p, body.light-theme .faq-answer, body.light-t
     box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.3);
 }
 
+.minimal-search-wrap {
+    margin-bottom: 1rem;
+}
+
+.minimal-toolbar {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.minimal-search-wrap input,
+.minimal-search-wrap select {
+    padding: 0.75rem 0.9rem;
+    background-color: #0d1127;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.minimal-search-wrap input {
+    width: 100%;
+    max-width: 320px;
+}
+
+.minimal-search-wrap select {
+    min-width: 150px;
+}
+
+.minimal-search-wrap input:focus,
+.minimal-search-wrap select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+    outline: none;
+}
+
 .search-box-wrapper {
     position: relative;
     display: flex;
