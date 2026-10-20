@@ -94,7 +94,6 @@ Display campus event lists, student profiles, and FAQs from external `.json` fil
 - [x] **Pagination**: Dynamic page calculation, items-per-page selector (4, 6, 8, 12), Prev/Next and numeric jump controls.
 - [x] **Error Handling**: Graceful error UI with live retry button on network/file fetch issues.
 - [x] **Register & Login Matching**:
-  - Full validation on Register (Name, Student ID, Email, Mobile, Password, Confirm Password match, Course, Year, Terms).
-  - Stored in `localStorage` (`registeredUsers` & `currentUser`).
-  - Login checks that all entered parameters match the registered account.
-  - Redirects to `dashboard.html` upon successful match.
+  - Registration and login are now handled server-side by the Practical 9 and Practical 10 PHP flows.
+  - User accounts are stored in MySQL; passwords are hashed with `password_hash()` and verified using `password_verify()`.
+  - Authenticated users receive role-checked PHP dashboards protected by sessions; credentials are not stored in browser `localStorage`.

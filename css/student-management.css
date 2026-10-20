@@ -1,0 +1,376 @@
+:root {
+    color-scheme: dark;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #e2e8f0;
+    background: #10162f;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    background: #10162f;
+    line-height: 1.5;
+}
+
+a {
+    color: #7dd3fc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem clamp(1rem, 4vw, 3rem);
+    background: #171f3e;
+    border-bottom: 1px solid #2a365c;
+}
+
+.brand {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 750;
+}
+
+.site-header nav,
+.site-header nav form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+.link-button {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #7dd3fc;
+    cursor: pointer;
+    font: inherit;
+}
+
+.page {
+    width: min(1240px, calc(100% - 2rem));
+    margin: 2.5rem auto;
+}
+
+.page-heading {
+    margin-bottom: 1.5rem;
+}
+
+.page-heading h1,
+.panel-heading h2 {
+    margin: 0;
+    color: #f8fafc;
+}
+
+.page-heading > p:last-child {
+    margin: 0.5rem 0 0;
+    color: #aebbd2;
+}
+
+.eyebrow {
+    margin: 0 0 0.3rem;
+    color: #38bdf8;
+    font-size: 0.75rem;
+    font-weight: 750;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.panel {
+    margin: 1.25rem 0;
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    border: 1px solid #2a365c;
+    border-radius: 12px;
+    background: #171f3e;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.record-count {
+    display: inline-grid;
+    min-width: 1.8rem;
+    min-height: 1.8rem;
+    place-items: center;
+    border-radius: 99px;
+    background: #263b61;
+    color: #bae6fd;
+    font-size: 0.85rem;
+    vertical-align: 0.1em;
+}
+
+.student-form,
+.filter-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.student-form label,
+.filter-form label {
+    display: grid;
+    gap: 0.4rem;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.student-form input,
+.student-form select,
+.filter-form input,
+.filter-form select {
+    width: 100%;
+    min-height: 2.65rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #3b4b72;
+    border-radius: 6px;
+    outline: none;
+    background: #10162f;
+    color: #f8fafc;
+}
+
+.student-form input:focus,
+.student-form select:focus,
+.filter-form input:focus,
+.filter-form select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgb(56 189 248 / 18%);
+}
+
+.form-actions,
+.filter-actions {
+    display: flex;
+    align-items: end;
+    gap: 0.65rem;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.85rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.primary-button {
+    background: #38bdf8;
+    color: #082f49;
+}
+
+.primary-button:hover {
+    background: #7dd3fc;
+    text-decoration: none;
+}
+
+.secondary-button {
+    border-color: #435475;
+    background: #202b4c;
+    color: #e2e8f0;
+}
+
+.secondary-button:hover {
+    border-color: #7dd3fc;
+    text-decoration: none;
+}
+
+.danger-button {
+    background: #7f1d1d;
+    color: #fee2e2;
+}
+
+.danger-button:hover {
+    background: #991b1b;
+}
+
+.notice {
+    margin: 1rem 0;
+    padding: 0.85rem 1rem;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.notice.success {
+    border-color: #15803d;
+    background: #14532d;
+    color: #dcfce7;
+}
+
+.notice.error {
+    border-color: #b91c1c;
+    background: #450a0a;
+    color: #fee2e2;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.85rem 0.7rem;
+    border-bottom: 1px solid #2a365c;
+    vertical-align: middle;
+}
+
+th {
+    color: #9fb0ca;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+td {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+}
+
+td strong,
+.subtext {
+    display: block;
+}
+
+.subtext {
+    margin-top: 0.18rem;
+    color: #9fb0ca;
+    font-size: 0.82rem;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.18rem 0.55rem;
+    border-radius: 99px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.status.active {
+    background: #14532d;
+    color: #bbf7d0;
+}
+
+.status.inactive {
+    background: #3f3f46;
+    color: #e4e4e7;
+}
+
+.row-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.row-actions form {
+    margin: 0;
+}
+
+.empty-state {
+    padding: 1.5rem;
+    border: 1px dashed #435475;
+    border-radius: 8px;
+    color: #aebbd2;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .student-form,
+    .filter-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .student-form,
+    .filter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions,
+    .filter-actions {
+        align-items: stretch;
+    }
+
+    table,
+    tbody,
+    tr,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+
+    tr {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #2a365c;
+    }
+
+    td {
+        display: grid;
+        grid-template-columns: minmax(7.5rem, 0.7fr) 1.3fr;
+        gap: 0.75rem;
+        padding: 0.45rem 0;
+        border: 0;
+    }
+
+    td::before {
+        content: attr(data-label);
+        color: #9fb0ca;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .row-actions {
+        justify-content: flex-start;
+    }
+}

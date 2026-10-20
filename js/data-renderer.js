@@ -71,6 +71,7 @@ function renderEvents(events, container) {
 
   container.innerHTML = events.map((event) => `
     <article class="data-card event-card">
+      ${event.poster ? `<img class="event-poster" src="${escapeHtml(event.poster)}" alt="Poster for ${escapeHtml(event.title || "event")}" loading="lazy">` : ""}
       <div class="card-header-row">
         <span class="event-badge">${escapeHtml(event.category || "Event")}</span>
         <span class="event-date">${escapeHtml(formatDate(event.date))}</span>

@@ -6,26 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("page-ready");
   setupNav();
   setupThemeToggle();
-  setupDashboard();
   setupNotificationDismiss();
   setupSlideshow();
   setupFaq();
   setupModal();
 });
-
-function setupDashboard() {
-  const welcomeHeading = document.querySelector(".dashboard h1");
-  if (!welcomeHeading) return;
-
-  try {
-    const currentUser = JSON.parse(localStorage.getItem("currentUser") || "null");
-    if (currentUser && currentUser.fullName) {
-      welcomeHeading.textContent = `Welcome, ${currentUser.fullName}`;
-    }
-  } catch (e) {
-    // Ignore JSON parse errors
-  }
-}
 
 function setupNotificationDismiss() {
   document.querySelectorAll(".dismiss-notice").forEach((btn) => {

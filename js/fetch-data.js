@@ -1,5 +1,5 @@
 const portalDataFiles = {
-  events: "../data/events.json",
+  events: "../events_api.php",
   students: "../data/students.json",
   faqs: "../data/faqs.json"
 };

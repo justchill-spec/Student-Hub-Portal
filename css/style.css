@@ -780,6 +780,15 @@ body.light-theme .dashboard-slider p, body.light-theme .faq-answer, body.light-t
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
 }
 
+.event-poster {
+    display: block;
+    width: 100%;
+    max-height: 280px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .data-card:focus {
     outline: 2px solid #38bdf8;
 }

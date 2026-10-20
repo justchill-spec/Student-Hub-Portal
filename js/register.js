@@ -1,55 +1,4 @@
 
-
-function redirecttohome() {
-  window.location.href = "dashboard.html";
-}
-
-function getRegisteredUsers() {
-  const defaultUsers = [
-    {
-      fullName: "Mukund Borole",
-      studentId: "25DCE012",
-      email: "mukund@gmail.com",
-      mobile: "9898989898",
-      password: "Password@123",
-      course: "BCA",
-      year: "2",
-      gender: "Male"
-    }
-  ];
-
-  const stored = localStorage.getItem("registeredUsers");
-  if (!stored) {
-    localStorage.setItem("registeredUsers", JSON.stringify(defaultUsers));
-    return defaultUsers;
-  }
-
-  try {
-    const parsed = JSON.parse(stored);
-    return Array.isArray(parsed) && parsed.length > 0 ? parsed : defaultUsers;
-  } catch (e) {
-    return defaultUsers;
-  }
-}
-
-function saveRegisteredUser(student) {
-  const users = getRegisteredUsers();
-  const existingIdx = users.findIndex(
-    (u) =>
-      u.email.toLowerCase() === student.email.toLowerCase() ||
-      (u.studentId && student.studentId && u.studentId.toLowerCase() === student.studentId.toLowerCase())
-  );
-
-  if (existingIdx >= 0) {
-    users[existingIdx] = { ...users[existingIdx], ...student };
-  } else {
-    users.push(student);
-  }
-
-  localStorage.setItem("registeredUsers", JSON.stringify(users));
-  localStorage.setItem("currentUser", JSON.stringify(student));
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("page-ready");
   setupRegistrationForm();
@@ -69,7 +18,7 @@ function setupRegistrationForm() {
       message: "Student ID must be 3-20 alphanumeric characters (e.g. 25DCE012)."
     },
     email: {
-      regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      regex: /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/,
       message: "Please enter a valid email address."
     },
     mobile: {
@@ -129,14 +78,15 @@ function setupRegistrationForm() {
     }
 
     if (fieldName === "confirmPassword") {
+      const confirmValue = document.getElementById("confirmPassword")?.value || "";
       const passwordVal = document.getElementById("password")?.value || "";
-      if (trimmed === "") return setError(fieldName, "Please confirm your password.");
-      if (trimmed !== passwordVal) return setError(fieldName, "Passwords do not match.");
+      if (confirmValue === "") return setError(fieldName, "Please confirm your password.");
+      if (confirmValue !== passwordVal) return setError(fieldName, "Passwords do not match.");
       return setError(fieldName, "");
     }
 
     if (fieldName === "password") {
-      const isValid = config.regex.test(trimmed);
+      const isValid = config.regex.test(value) && value.length <= 72;
       const res = setError(fieldName, isValid ? "" : config.message);
       const confirmField = document.getElementById("confirmPassword");
       if (confirmField && confirmField.value) {
@@ -164,7 +114,6 @@ function setupRegistrationForm() {
   document.getElementById("terms")?.addEventListener("change", () => validateField("terms", "true"));
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
     const allFieldNames = ["fullName", "studentId", "email", "mobile", "password", "confirmPassword", "course", "year", "gender", "terms"];
 
     let isFormValid = true;
@@ -181,21 +130,6 @@ function setupRegistrationForm() {
       }
     });
 
-    if (isFormValid) {
-      const newStudent = {
-        fullName: document.getElementById("fullName").value.trim(),
-        studentId: document.getElementById("studentId").value.trim().toUpperCase(),
-        email: document.getElementById("email").value.trim(),
-        mobile: document.getElementById("mobile").value.trim(),
-        password: document.getElementById("password").value,
-        course: document.getElementById("course").value,
-        year: document.getElementById("year").value,
-        gender: document.querySelector('input[name="gender"]:checked')?.value || "Other"
-      };
-
-      saveRegisteredUser(newStudent);
-      alert(`Registration successful! Account created for ${newStudent.fullName} (${newStudent.studentId}). Redirecting to Dashboard...`);
-      redirecttohome();
-    }
+    if (!isFormValid) e.preventDefault();
   });
 }

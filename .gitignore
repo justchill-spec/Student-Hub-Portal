@@ -1,0 +1,4 @@
+data/submissions/contact_submissions.csv
+uploads/event-posters/*
+!uploads/event-posters/.htaccess
+!uploads/event-posters/index.html

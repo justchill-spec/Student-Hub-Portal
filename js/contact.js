@@ -6,36 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("page-ready");
   setupNav();
   setupThemeToggle();
-  setupContactForm();
   setupFaqSection();
 });
-
-function setupContactForm() {
-  const form = document.getElementById("contactForm");
-  if (!form) return;
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("contactName")?.value.trim();
-    const email = document.getElementById("contactEmail")?.value.trim();
-    const message = document.getElementById("message")?.value.trim();
-
-    if (!name || !email || !message) {
-      alert("Please fill in all required fields (Name, Email, Message) before submitting.");
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    alert(`Thank you, ${name}! Your message has been successfully submitted to student services.`);
-    form.reset();
-  });
-}
 
 function setupNav() {
   const nav = document.querySelector("nav");

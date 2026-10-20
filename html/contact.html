@@ -32,7 +32,7 @@
         <a href="course.html">COURSE</a>
      
         <a href="result.html">RESULT</a>
-        <a href="dashboard.html">DASHBOARD</a>
+        <a href="dashboard.php">DASHBOARD</a>
         <a href="timetable.html">TIMETABLE</a>
         <a href="profile.html">PROFILE</a>
         <a href="events.html">EVENTS</a>
@@ -45,15 +45,15 @@
     <section class="contact" aria-labelledby="contact-title">
         <h1 id="contact-title">Contact Us</h1>
 
-        <form id="contactForm">
-            <label>Name:</label>
-            <input type="text" id="contactName" placeholder="Enter Your Name">
+        <form id="contactForm" action="../contact_process.php" method="post">
+            <label for="contactName">Name:</label>
+            <input type="text" id="contactName" name="name" placeholder="Enter Your Name" maxlength="100" required>
 
-            <label>Email:</label>
-            <input type="email" id="contactEmail" placeholder="Enter Your Email">
+            <label for="contactEmail">Email:</label>
+            <input type="email" id="contactEmail" name="email" placeholder="Enter Your Email" maxlength="254" required>
 
-            <label>Message:</label>
-            <textarea id="message" rows="5" placeholder="Enter Your Message"></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" maxlength="5000" placeholder="Enter Your Message" required></textarea>
 
             <button type="submit">Send</button>
         </form>

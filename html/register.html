@@ -19,22 +19,22 @@
 
     <h2 style="text-align: center; margin-bottom: 1.5rem; color: #35b0e4;">Student Registration Form</h2>
 
-    <form id="studentRegistrationForm" novalidate>
+    <form id="studentRegistrationForm" action="../register_process.php" method="post" novalidate>
         <div class="form-group">
             <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            <input type="text" id="fullName" name="fullName" maxlength="50" placeholder="Enter your full name" required>
             <span class="error-message" id="fullNameError"></span>
         </div>
 
         <div class="form-group">
             <label for="studentId">Student ID:</label>
-            <input type="text" id="studentId" name="studentId" placeholder="Enter Student ID (e.g. 25DCE012)" required>
+            <input type="text" id="studentId" name="studentId" maxlength="20" placeholder="Enter Student ID (e.g. 25DCE012)" required>
             <span class="error-message" id="studentIdError"></span>
         </div>
 
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="student@example.com" required>
+            <input type="email" id="email" name="email" maxlength="254" placeholder="student@example.com" required>
             <span class="error-message" id="emailError"></span>
         </div>
 
@@ -46,13 +46,13 @@
 
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="At least 8 characters (letters, numbers, symbols)" required>
+            <input type="password" id="password" name="password" maxlength="72" autocomplete="new-password" placeholder="At least 8 characters (letters, numbers, symbols)" required>
             <span class="error-message" id="passwordError"></span>
         </div>
 
         <div class="form-group">
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" maxlength="72" autocomplete="new-password" placeholder="Re-enter your password" required>
             <span class="error-message" id="confirmPasswordError"></span>
         </div>
 
@@ -83,9 +83,9 @@
         </div>
 
         <div class="form-group">
-            <label>Gender:</label>
+            <label id="genderLabel">Gender:</label>
             <div class="radio-group">
-                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
                 <label><input type="radio" name="gender" value="Female"> Female</label>
                 <label><input type="radio" name="gender" value="Other"> Other</label>
             </div>
@@ -108,7 +108,7 @@
 
     <p style="text-align: center; margin-top: 1.5rem;">
         Already have an account?
-        <a href="login.html">Login</a>
+        <a href="login.php">Login</a>
     </p>
 
     <script src="../js/register.js"></script>
